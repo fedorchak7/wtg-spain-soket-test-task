@@ -69,7 +69,22 @@ docker run --rm -u "$(id -u):$(id -g)" -v "$(pwd):/var/www/html" -w /var/www/htm
 # 8. Build frontend assets
 ./vendor/bin/sail npm install
 ./vendor/bin/sail npm run build
+
+# 9. (Optional) Seed demo users
+./vendor/bin/sail artisan db:seed
 ```
+
+### Demo Users
+
+After seeding, the following accounts are available (password: `password`):
+
+| Name    | Email               |
+|---------|---------------------|
+| Alice   | alice@example.com   |
+| Bob     | bob@example.com     |
+| Charlie | charlie@example.com |
+| Diana   | diana@example.com   |
+| Eve     | eve@example.com     |
 
 ### Access
 

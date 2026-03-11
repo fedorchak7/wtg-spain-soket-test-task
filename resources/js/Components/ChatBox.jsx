@@ -74,7 +74,7 @@ export default function ChatBox({
             await onSend(text.trim());
             setText("");
         } catch {
-            setSendError("Не удалось отправить сообщение. Попробуйте ещё раз.");
+            setSendError("Failed to send message. Please try again.");
         } finally {
             setSending(false);
         }
